@@ -18,6 +18,38 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("simpleduc"),
+      ),
+      body: Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text("mail:"),
+          TextFormField(
+            decoration: const InputDecoration(label: Text("Mail:")),
+          ),
+          const Text("mot de passe:"),
+          TextFormField(
+            decoration: const InputDecoration(label: Text("Mail:")),
+          ),
+          const ElevatedButton(onPressed: null, child: Text("Connection"))
+        ],
+      )),
+    );
+  }
+}
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
   @override
